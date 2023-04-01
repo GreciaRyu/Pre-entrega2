@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=operagx">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div>
+            <ul>
+                <li>
+                    <a href="index.html"> <img src="../images/Logo_playlist-01.png" 
+                        class=Logo alt="Logo" width="100px" height="40px"></a>
+                </li>
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="categorias.html">Categorias</a>
+                </li>
+                <li>
+                    <a href="coleccion.html">Colección</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+                <li>
+                     <!--colocar el perfil hasta la derecha de la navbar, quitar texto-->
+                    <a href="perfil.html">
+                    <img src="../images/hamster_gamer.jpg"  class="navbar--profile"
+                    alt="Perfil" width="60" height="60"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="asideL">
+            <h2 class="Texto">Quiero colaborar</h2>
+            <a class="Texto" href="https://www.buymeacoffee.com">Invitanos un café</a>
+        </div>
+        <div class="content" class="ContactCenter">
+            <h1>¿Quieres saber dónde encontrarnos?</h1>
+            <div>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d410.38563176477504!2d-58.458578332013744!3d-34.62729085396816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca26611b4a5f%3A0xf9f1e93265c5fd91!2sCD%20Market%20Flores!5e0!3m2!1ses!2sar!4v1677374428453!5m2!1ses!2sar" 
+                width="500" height="350" style="border:0;" 
+                allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div>
+                <h1 class="Texto">¿Conseguiste algún error en PlayList?</h1>
+                <h4 class="Texto">Cuentanos más:</h4>
+                <form action="#">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" placeholder="Crash" name="name">
+                    <br>
+                    <label for="lastname">Apellido:</label>
+                    <input type="text" id="lastname" placeholder="Bandicoot" name="lastname">
+                    <br>
+                    <label for="age">Edad:</label>
+                    <input type="number" id="age" placeholder="19" min="0" max="120" name="age">
+                    <br>
+                    <label for="errordate">Fecha de error:</label>
+                    <input type="date" id="errordate" name="errordate">
+                        <div>
+                            <p class="Texto"><strong>¿Qué tan importante lo consideras?</strong></p>
+                            <input type="radio" id="urgent" value="urgent" name="level">
+                            <label for="urgent">Muy importante!</label>
+                            <br>
+                            <input type="radio" id="significant" value="significant" name="level">
+                            <label for="significant">Importante</label>
+                            <br>
+                            <input type="radio" id="not_important" value="not_important" name="level">
+                            <label for="not_important">Meh...</label>
+                        </div>
+                        <br>
+                    <label for="details"><strong>¿Qué conseguiste?</strong></label>
+                    <br>
+                    <textarea id="details" rows="8" cols="60" name="details"></textarea>
+                    <br>
+                    <input type="reset" value="Borrar todo">
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+        <aside class="asideR">
+            <ul>
+                <li>Ayuda</li>
+                <li>Configuración</li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <div>
+            <p>¿Quienes somos?</p>
+            <p>Siguenos en:</p>   
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank">
+                    <img src="../images/footer/instagram.png" width="60"height="60">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com" target="_blank">
+                    <img src="../images/footer/twitter.png" width="60"height="60">    
+                    </a>
+                </li>
+                <li>
+                    <a href="https://facebook.com" target="blank">
+                    <img src="../images/footer/facebook.png" widht="60" height="60">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
