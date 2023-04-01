@@ -1,47 +1,61 @@
 :root {--principal-color: rgb(156, 39, 176);
-        --secondary-color: rgb(118, 255, 3);}
+        --secondary-color: rgb(118, 255, 3);
+        --content--fontcolor: rgb(244, 217, 249);
+    }
 
 main {display: grid;
     grid-template-areas:
-        "asideL content asideR" 
         "asideL content asideR";
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: auto;
     column-gap: 4%;}
 
     .asideL { grid-area: asideL;}
-    .Content {grid-area: contentL, contentR;}
-    .ContentL {grid-area: contentL;}
-    .ContentR {grid-area: contentR;}
+    .Content {grid-area: content;}
     .asideR { grid-area: asideR;}
 
 
 body {margin: 0%;}
 
-h1,h2,h3,h4,p,a {font-family: 'Roboto', sans-serif;}
+h1,h2,h3,h4,p,a,li {font-family: 'Roboto', sans-serif;}
 
 .auxBG {border: 5px solid blue;}
 /*body {background-color: rgb(20, 20, 20);}*/
-/*.Texto {color: rgb(244, 217, 249)}*/ 
+/*.fontcolor-content {color: var(--content--fontcolor)}*/ 
 
 header {position:sticky; top:0px; margin: 0px;}
 
 .navbar {background-color: var(--principal-color); width: 100%; height:auto; z-index: 1;}
-.navbar ul {margin:0% 10%; display: flex; align-items: center; padding: 0%;}
-.navbar ul li {list-style: none; padding: 1%;}
+.navbar ul {margin:0% 6rem; display: flex; align-items: center; padding: 0%;}
+.navbar ul li {list-style: none; padding: 0.5rem;}
 .navbar ul a {text-decoration: none; color: rgb(255, 255, 255);}
-.navbar--profile {border-radius: 50%; border: 1px solid rgb(20, 20, 20); z-index: 2; position:fixed; margin-left: 30%;}
+.navbar-profile {border-radius: 50%; border: 0.1rem solid rgb(20, 20, 20); z-index: 2; position:fixed; margin-left: 30rem;}
 
-main {margin:0% 10%}
+main {margin:0% 6rem}
 main section img { height: 160px; width: 100px;}
-.main-aside-profile-image {border-radius: 50%; border: 1px solid rgb(20, 20, 20); width: 2rem; height: 2rem;}
-.asideL,.asideR {margin-top: 40%;}
-.asideL div {display:flex; flex-wrap: wrap; margin:8% 1%; align-items: center;}
-.asideL div p {margin: 1%;}
+
+.main-aside-profile-image {border-radius: 50%; border: 0.1rem solid rgb(20, 20, 20); width: 2rem; height: 2rem;}
+.asideL,.asideR {margin-top: 7rem;}
+.asideL ul li,.asideR ul li {list-style: none; padding: 1rem 0.5rem;}
+.asideL div {display:flex; flex-wrap: wrap; margin:1.6rem 0.5rem; align-items: center;}
+.asideL div p {margin: 0.1rem;}
 
 .Content section {display: flex; justify-content:space-evenly; align-content: center ;}
-.SectionHeader {display: flex; justify-content: space-between; margin-right:8%; margin-left: 8%; align-items: center;}
+.SectionHeader {display: flex; justify-content: space-between; margin: 0% 3.5rem; align-items: center;}
 
-footer {background-color: rgb(0, 0, 0);}
-footer ul li {list-style: none; display: inline;}
+
+footer {background-color: rgb(0, 0, 0); margin-bottom:0%; width: 100%;}
+footer ul {display:flex; justify-content: flex-end; margin:0% 6rem}
+footer ul li {list-style: none;}
+footer ul li a {text-decoration: none;}
 footer p {color: var(--secondary-color);}
+.footer-text {display: flex; justify-content: space-between; margin:0% 18rem 0% 6rem} 
+
+/*footer {display: grid;
+    grid-template-areas:
+        "Leftside Rightside";
+    grid-template-columns: 70% 30%;
+    column-gap: 4%;}
+
+    .Rightside { grid-area: Rightside;}
+    .Leftside {grid-area: Leftside;}*/
