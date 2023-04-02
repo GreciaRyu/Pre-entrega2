@@ -16,33 +16,42 @@ body {background-color: rgb(20, 20, 20);}
 header {position:sticky; top:0px; margin: 0px;}
 
 .navbar {background-color: var(--principal-color); width: 100%; height:auto; z-index: 1;}
-.navbar ul {margin:0% 6rem; display: flex; align-items: center; padding: 0%;}
 .navbar ul li {list-style: none; padding: 0.5rem;}
 .navbar ul a {text-decoration: none; color: rgb(255, 255, 255);}
 
 
 main {margin:0% 6rem 1.5rem 6rem; color: var(--content-fontcolor);}
-main section img { height: 10rem; width: 6.6rem;}
+main section img { height: 10rem; width: 6.6rem; border-radius: 2rem;}
 main aside p em {color: rgb(190, 255, 136);}
 
 
 .main-aside-profile-image {border-radius: 50%; border: 0.1rem solid rgb(20, 20, 20); width: 2rem; height: 2rem;}
 
 .asideL ul li,.asideR ul li {list-style: none; padding: 1rem 0.5rem;}
+.asideL a {text-decoration: none}
 
 .Content section {display: flex; justify-content:space-evenly; align-content: center ;}
-.SectionHeader {display: flex; justify-content: space-between; margin: 0% 3.5rem; align-items: center;}
 .SectionHeader p { color: var(--secondary-color)}
+
+.MainCard {padding: 0.5rem; min-width: 40%; width: 90%; height: auto;
+            border-radius: 1rem; background-color: var(--principal-color)}
+.MainCard img {border-radius: 1rem; float: left; margin: 0.3rem; width: 50px; height:60px;}
+.CardTittle {color: var(--secondary-color); display: flex; align-items: center;}
+.CardContent p {margin:0}
+.CardFooter {color: var(--secondary-color);display: flex; justify-content: space-between; padding: 0 1rem;}
+
 
 
 footer {background-color: rgb(0, 0, 0); margin-bottom:0%; width: 100%;}
-footer ul {display:flex; justify-content: flex-end; margin:0% 6rem}
+footer ul {display:flex; justify-content: flex-end;}
 footer ul li {list-style: none;}
 footer ul li a {text-decoration: none;}
 footer p {color: var(--secondary-color);}
-.footer-text {display: flex; justify-content: space-between; margin:0% 18rem 0% 6rem} 
+.footer-text {display: flex; justify-content: space-between;} 
 
+/*---------------------------------------------------------------------------------------------------------------*/
 /*----------DESKTOP---------*/
+
 @media (min-width:992px){
 
     .basegrid {display: grid;
@@ -67,20 +76,28 @@ footer p {color: var(--secondary-color);}
         .asideL { grid-area: asideL;}
         .Content {grid-area: content;}
         .asideR { grid-area: asideR;}
-    
-.navbar-profile {border-radius: 50%; border: 0.1rem solid rgb(20, 20, 20); z-index: 2; position:fixed; margin:0 0 0 32%;}
-    main {margin:0% 6rem 1.5rem 6rem}
-    main section img { height: 10rem; width: 6.6rem;}
 
-    .asideL,.asideR {margin-top: 7rem;}
+     .navbar ul {margin:0% 6rem; display: flex; align-items: center; padding: 0%; flex-wrap: wrap;}
+     .navbar-profile {border-radius: 50%; border: 0.1rem solid rgb(20, 20, 20); z-index: 2; 
+                      position:fixed; margin:0 0 0 32%;}
 
-    .asideL div {display:flex; flex-wrap: wrap; margin:1.6rem 0.5rem; align-items: center;}
-    .asideL div p {margin: 0.1rem;}
+     main {margin:0% 6rem 1.5rem 6rem}
+
+     main section img { height: 10rem; width: 6.6rem;}
+     .SectionHeader {display: flex; justify-content: space-between; margin: 0% 3.5rem; align-items: center;}
+
+     .asideL,.asideR {margin-top: 7rem;}
+     .asideL div {display:flex; flex-wrap: wrap; margin:1.6rem 0.5rem; align-items: center;}
+     .asideL div p {margin: 0.1rem;}
     .asideR ul { padding: 0rem;}
+
+    footer ul {margin:0% 6rem;}
+    .footer-text { margin:0% 18rem 0% 6rem;} 
 }
 
+/*---------------------------------------------------------------------------------------------------------------*/
 /*----------TABLET--------*/
-/* TABLET */
+
 @media (min-width:769px) and (max-width:991px){
     .basegrid {display: grid;
         grid-template-areas: 
@@ -105,18 +122,28 @@ footer p {color: var(--secondary-color);}
             .Content {grid-area: content;}
             .asideR { grid-area: asideR;}
     
-            .navbar-profile {border-radius: 50%; border: 0.1rem solid rgb(20, 20, 20); z-index: 2; position:fixed; margin:0 0 0 4%;}
+            .navbar ul {margin:0% 6rem; display: flex; align-items: center; padding: 0%; flex-wrap: wrap;}
+            .navbar-profile {border-radius: 50%; border: 0.1rem solid rgb(20, 20, 20); z-index: 2; 
+                              position:fixed; margin:0 0 0 4%;}
            
             main {margin: 1rem 4rem }
+
+            main section img { height: 10rem; width: 6.6rem;}
+            .SectionHeader {display: flex; justify-content: space-between; margin: 0% 3.5rem; align-items: center;}
+
             .asideR {display:none;}
             .asideL {margin-top: 5rem;}
             .asideL img {float:left; margin:0.2rem}
             .asideL div {display:inline-block; margin:1rem 0.5rem; width: auto;}
             .asideL div p {margin: 0.1rem;}
 
+            footer ul {margin:0% 6rem;}
+            .footer-text { margin:0% 18rem 0% 6rem;} 
 }
 
+/*---------------------------------------------------------------------------------------------------------------*/
 /*----------MOBILE---------*/
+
 @media (max-width:768px){
 
      .basegrid {display: grid;
@@ -144,17 +171,76 @@ footer p {color: var(--secondary-color);}
         .Content {grid-area: content;}
         .asideR { grid-area: asideR;}
 
-        .navbar-profile {border-radius: 50%; border: 0.1rem solid rgb(20, 20, 20); z-index: 2; position:fixed; margin:0 0 0 4%;}
+        .navbar ul {margin:0% 6rem; display: flex; align-items: center; padding: 0%; flex-wrap: wrap;}
+        .navbar-profile {border-radius: 50%; border: 0.1rem solid rgb(20, 20, 20); z-index: 2;
+                         position:fixed; margin:0 0 0 4%;}
        
         main {margin: 1rem 2rem }
+
+        main section img { height: 10rem; width: 6.6rem;}
+        .SectionHeader {display: flex; justify-content: space-between; margin: 0% 3.5rem; align-items: center;}
+
         .asideR {display:none;}
         .asideL {margin-top: 1rem;}
         .asideL img {float:left; margin:0.2rem}
         .asideL div {display:inline-block; margin:1rem 0.5rem; width: auto;}
         .asideL div p {margin: 0.1rem;}
+
+        footer ul {margin:0% 6rem;}
+        .footer-text { margin:0% 18rem 0% 6rem;} 
     }
 
+/*---------------------------------------------------------------------------------------------------------------*/
+/*----------MOBILE XS---------*/
 
+@media (max-width:576px){
+
+    .basegrid {display: grid;
+   grid-template-areas: 
+           "header"
+           "main"
+           "footer";
+       grid-template-columns: 100%;
+       grid-template-rows: auto auto auto;}
+   
+       header {grid-area: "header";}
+       main {grid-area: "main"}
+       footer {grid-area: footer;}
+
+   .main--grid {display: grid;
+       grid-template-areas:
+           "content" 
+           "asideL"
+           "asideR";
+       grid-template-columns: 100%;
+       grid-template-rows: auto auto auto;
+       }
+   
+       .asideL { grid-area: asideL;}
+       .Content {grid-area: content;}
+       .asideR { grid-area: asideR;}
+
+       .navbar ul {margin:0% 1rem; display: flex; flex-wrap: wrap; align-items: center; 
+                    justify-content:space-evenly; padding: 0%;}
+       .navbar-profile {border-radius: 50%; border: 0.1rem solid rgb(20, 20, 20); z-index: 2; 
+                        position: fixed; margin:0 0 0 -2rem;}
+      
+       main {margin: 1rem 2rem }
+       main section img { height: 30%; width: 20%; border-radius: 2rem; padding:0.2rem; display: flex; flex-shrink: 4;}
+       .SectionHeader {display: flex; justify-content: space-between; margin: 0 0.7rem; 
+                        padding: 0 0.3rem; align-items: center;}
+
+       .asideR {display:none;}
+       .asideL {margin-top: 1rem;}
+       .asideL img {float:left; margin:0.2rem}
+       .asideL div {display:inline-block; margin:1rem 0.5rem; width: auto;}
+       .asideL div p {margin: 0.1rem;}
+
+       .footer-allcontent {padding: 0.5rem;}
+       footer ul {margin:0% 2rem;}
+       .footer-text { margin:0% 8rem 0% 2rem;} 
+       .footer-text p { margin:0.1rem}
+   }
 
 
 /*footer {display: grid;
