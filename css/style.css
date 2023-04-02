@@ -148,11 +148,10 @@ footer p {color: var(--secondary-color);}
        
         main {margin: 1rem 2rem }
         .asideR {display:none;}
-        .asideL, {margin-top: 1rem;}
+        .asideL {margin-top: 1rem;}
         .asideL img {float:left; margin:0.2rem}
         .asideL div {display:inline-block; margin:1rem 0.5rem; width: auto;}
         .asideL div p {margin: 0.1rem;}
-
     }
 
 
